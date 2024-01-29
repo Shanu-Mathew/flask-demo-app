@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Demo App</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles/home.css">
+</head>
+<body>
+    <div class="background">
+        <div class="header">
+            <h1 class="title">Calculator App</h1>
+            <div class="calculator-body">
+                <form class="form" action="{{ url_for('calculate')}}" method="post">
+                <div class="number-row">
+                    <label for="num1">Number 1:</label>
+                    <input type="number" name="num1" required>
+                    <br>
+                </div>
+                <div class="number-row">
+                    <label for="num2">Number 2:</label>
+                    <input type="number" name="num2" required>
+                    <br>
+                </div>
+                <br>
+                <button type="submit" class="addition" name="operator" value="+">Add</button>
+                <button type="submit" class="subtraction" name="operator" value="-">Subtract</button>
+                <button type="submit" class="multiply" name="operator" value="*">Multiply</button>
+                <button type="submit" class="divide" name="operator" value="/">Divide</button>
+                </form>
+                <p class="results">{{results}}</p>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
